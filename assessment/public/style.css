@@ -1,0 +1,26 @@
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    background: beige;
+}
+header > div, header > nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+main.home > div {
+    margin-top: 40px; 
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+input {
+    display: block;
+    margin: 10px 10px 10px 0;
+}
+input[type="button"] {
+    display: inline-block;
+}
+main {
+    margin-top: 50px;
+    margin-left: 10px;
+}
