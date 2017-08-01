@@ -6,7 +6,7 @@ import MainContent from './mainContent.js';
 class Home extends React.Component{
     constructor(props) {
         super(props);
-        this.subMenu = ['HomeContent', 'HomeSubMenu2', 'HomeSubMenu3', 'HomeSubMenu4'];
+        this.subMenu = ['About 1', 'About 2', 'About 3', 'About 4'];
         // this.state={
         //     url: 'initial'
         // }

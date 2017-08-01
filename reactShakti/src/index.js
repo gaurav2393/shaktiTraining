@@ -25,7 +25,12 @@ ReactDOM.render(
                 </nav>                
             </header>
             <main>
-                <Route path = "/home" component={Home} />                
+                <Route path = "/home" component={Home} />
+                <Route path = "/about" component={About} />
+                <Route path = "/topics" component={Topics} />
+                {/*<Route path = "/about" component={Home} />
+                 <Route path = "/topics" component={Home} />
+                 <Route path = "/home" component={Home} />*/}
                 {/*<Route exact path="/" component={MyButton}/>
                 <Route exact path="/textbox" component={TextBox}/>
                 <Route path="/about" component={(props)=> {                    
