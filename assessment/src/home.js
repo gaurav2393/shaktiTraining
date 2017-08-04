@@ -14,7 +14,7 @@ class Home extends React.Component{
         // this.decrementTest = this.decrementTest.bind(this);
         // this.incrementTest = this.incrementTest.bind(this);
         // this.handleChange = this.handleChange.bind(this);
-        this.increase = this.increase.bind(this);
+        // this.increase = this.increase.bind(this);
         this.decrease = this.decrease.bind(this);
     }
     // handleChange(event) {
@@ -33,9 +33,9 @@ class Home extends React.Component{
     handleChange(event) {
         
     }
-    increase() {
-        this.props.dispatch(actions.incrementFunction());
-    }
+    // increase() {
+    //     this.props.dispatch(actions.incrementFunction());
+    // }
     decrease() {
         this.props.dispatch(actions.decrementFunction());
     }
@@ -47,7 +47,7 @@ class Home extends React.Component{
                     {/*<Link to={`/home/modifyTest`}>Modify Tests</Link>*/}
                 </div>
                 <div>
-                    <ModifyTest increase={this.increase} decrease={this.decrease} handleChange={this.handleChange} counter={this.props.counter}/>
+                    <ModifyTest increase={this.props.increase} decrease={this.decrease} handleChange={this.handleChange} counter={this.props.counter}/>
                     {/*<ModifyTest handleChange={this.handleChange} decrementTest={this.decrementTest} incrementTest={this.incrementTest} numberOfTest={this.state.numberOfTest}/>*/}
                     {/*<Route path="/home/modifyTest" component={()=> {
                         return <ModifyTest handleChange={this.handleChange} decrementTest={this.decrementTest} incrementTest={this.incrementTest} numberOfTest={this.state.numberOfTest}/>
@@ -62,9 +62,14 @@ function mapStateToProps(state){
         counter: state.state.counter
     }
 };
-function mapDispatchToProps(state){
+function mapDispatchToProps(dispatch){
     return {
-        counter: state.state.counter
+        increase: ()=>{
+            dispatch(actions.incrementFunction())
+        },
+        decrease: ()=>{
+            dispatch(actions.decrementFunction())
+        }
     }
 };
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
